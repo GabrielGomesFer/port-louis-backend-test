@@ -94,3 +94,6 @@ FLUSH PRIVILEGES;
 ```
 npm run dev
 ```
+
+### Teste via Postman
+Uma collection do Postman está disponível na raiz do projeto para facilitar os testes da API.

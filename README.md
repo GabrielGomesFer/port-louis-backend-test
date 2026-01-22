@@ -71,7 +71,7 @@ A aplicação cria automaticamente o banco de dados e as tabelas necessárias na
 
 É necessário apenas utilizar um usuário do MySQL que possua permissão para criação de banco e tabelas.
 
-Copie esse arquivo e renomeie para `.env`:
+Copie o arquivo `.env.example` e renomeie para apenas `.env`:
 
 No arquivo `.env`, informe as credenciais do seu MySQL local:
 

@@ -56,7 +56,7 @@ port-louis-be/
 ### Clonar o projeto
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/GabrielGomesFer/port-louis-backend-test.git
 cd port-louis-be
 ```
 

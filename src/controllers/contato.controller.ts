@@ -34,9 +34,9 @@ export async function findById(req: Request, res: Response) {
   const { id } = req.params;
 
   const contato = await getContatoById(Number(id));
-  if (contato === null || contato === undefined){
-  return res.status(404).json({ error: "ID não encontrado" });
-}
+  if (contato === null || contato === undefined) {
+    return res.status(404).json({ error: "ID não encontrado" });
+  }
 
   res.status(200).json(contato);
 }
@@ -56,6 +56,11 @@ export async function update(req: Request, res: Response) {
 
 export async function remove(req: Request, res: Response) {
   const { id } = req.params;
+
+  const contato = await getContatoById(Number(id));
+  if (contato === null || contato === undefined) {
+    return res.status(404).json({ error: "ID não encontrado" });
+  }
 
   await deleteContato(Number(id));
   res.status(204).send();

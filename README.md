@@ -65,25 +65,31 @@ cd port-louis-be
 npm install
 ```
 
-### Configurar variáveis de ambiente
-Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
-```
-PORT=3000
+### Configuração do MySQL
 
+A aplicação cria automaticamente o banco de dados e as tabelas necessárias na inicialização.
+
+É necessário apenas utilizar um usuário do MySQL que possua permissão para criação de banco e tabelas.
+
+Copie esse arquivo e renomeie para `.env`:
+
+No arquivo `.env`, informe as credenciais do seu MySQL local:
+
+Em seguida, ajuste as variáveis de acordo com o seu ambiente MySQL local:
+
+```env
 DB_HOST=localhost
-DB_USER=contatos_user
-DB_PASSWORD=
+DB_USER=seu_usuario_mysql
+DB_PASSWORD=sua_senha_mysql
 DB_NAME=contatos_db
 ```
-
-### Criar banco de dados e usuário no MySQL
-Acesse o MySQL e execute:
+Caso prefira, você pode criar um usuário específico para o projeto com as permissões adequadas. Exemplo:
 ```
+
 CREATE USER 'contatos_user'@'localhost' IDENTIFIED BY '';
 GRANT ALL PRIVILEGES ON *.* TO 'contatos_user'@'localhost';
 FLUSH PRIVILEGES;
 ```
-
 ### Executar a aplicação
 ```
 npm run dev
